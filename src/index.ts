@@ -5,6 +5,7 @@ export interface Env {
 export interface LastUpdate {
 	fileName: string;
 	downloadUrl: string;
+	version: string;
 }
 
 export default {
@@ -27,6 +28,7 @@ export default {
 						latestVersion = {
 							fileName: object.key,
 							downloadUrl: `https://bucket.nodebox.cloud/${object.key}`,
+							version: version.join('.'),
 						};
 					}
 				}
